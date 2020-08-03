@@ -3,4 +3,9 @@ project(template_images)
 
 set(CMAKE_CXX_STANDARD 14)
 
+add_subdirectory(test)
+
+set(SOURCE_FILES)
 add_executable(template_images main.cpp)
+add_library(core ${SOURCE_FILES})
+target_link_libraries(template_images core)
