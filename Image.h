@@ -7,7 +7,9 @@
 
 
 class Image {
-
+private:
+    int height;
+    int width;
 };
 
 
