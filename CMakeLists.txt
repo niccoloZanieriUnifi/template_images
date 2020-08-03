@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 14)
 
 add_subdirectory(test)
 
-set(SOURCE_FILES)
+set(SOURCE_FILES Image.cpp Image.h)
 add_executable(template_images main.cpp)
 add_library(core ${SOURCE_FILES})
 target_link_libraries(template_images core)
