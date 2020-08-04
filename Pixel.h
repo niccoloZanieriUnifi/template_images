@@ -7,6 +7,7 @@
 
 
 class Pixel {
+public:
     virtual ~Pixel() = default;
 
     virtual void operator+(const Pixel &rhs) = 0;
