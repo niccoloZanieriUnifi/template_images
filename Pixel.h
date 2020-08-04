@@ -7,7 +7,15 @@
 
 
 class Pixel {
+    virtual ~Pixel() = default;
 
+    virtual void operator+(const Pixel &rhs) = 0;
+
+    virtual void operator-(const Pixel &rhs) = 0;
+
+    virtual void operator==(const Pixel &rhs) = 0;
+
+    virtual void operator!=(const Pixel &rhs) = 0;
 };
 
 
