@@ -7,6 +7,7 @@
 
 
 class PixelRGB {
+
 private:
     float r;
     float g;
