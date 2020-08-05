@@ -6,6 +6,7 @@
 #define TEMPLATE_IMAGES_PIXELRGB_H
 
 
+#include <stdexcept>
 
 class PixelRGB {
 public:
@@ -16,6 +17,14 @@ public:
     explicit PixelRGB(float c) : PixelRGB(c, c, c) {};
 
     PixelRGB() : PixelRGB(0, 0, 0) {};
+
+    void operator+(const PixelRGB &rhs);
+
+    void operator-(const PixelRGB &rhs);
+
+    bool operator==(const PixelRGB &rhs) const;
+
+    bool operator!=(const PixelRGB &rhs) const;
 
 private:
     float r;

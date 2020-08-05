@@ -5,6 +5,7 @@
 #ifndef TEMPLATE_IMAGES_PIXELGA_H
 #define TEMPLATE_IMAGES_PIXELGA_H
 
+#include <stdexcept>
 
 class PixelGA {
 public:
@@ -14,6 +15,13 @@ public:
 
     PixelGA() : PixelGA(0, 0) {};
 
+    void operator+(const PixelGA &rhs);
+
+    void operator-(const PixelGA &rhs);
+
+    bool operator==(const PixelGA &rhs) const;
+
+    bool operator!=(const PixelGA &rhs) const;
 
 private:
     float g;

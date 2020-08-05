@@ -5,6 +5,8 @@
 #ifndef TEMPLATE_IMAGES_PIXELRGBA_H
 #define TEMPLATE_IMAGES_PIXELRGBA_H
 
+#include <stdexcept>
+
 
 class PixelRGBA {
 public:
@@ -20,9 +22,9 @@ public:
 
     void operator-(const PixelRGBA &rhs);
 
-    void operator==(const PixelRGBA &rhs);
+    bool operator==(const PixelRGBA &rhs) const;
 
-    void operator!=(const PixelRGBA &rhs);
+    bool operator!=(const PixelRGBA &rhs) const;
 
 private:
     float r;
