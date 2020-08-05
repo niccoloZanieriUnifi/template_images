@@ -5,10 +5,9 @@
 #ifndef TEMPLATE_IMAGES_PIXELG_H
 #define TEMPLATE_IMAGES_PIXELG_H
 
-#include "Pixel.h"
 
-class PixelG : Pixel {
-    ~PixelG() override = default;
+class PixelG {
+    ~PixelG() = default;
 
     explicit PixelG(float g) : g(g) {};
 

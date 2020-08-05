@@ -5,15 +5,15 @@
 #ifndef TEMPLATE_IMAGES_PIXELGA_H
 #define TEMPLATE_IMAGES_PIXELGA_H
 
-#include "Pixel.h"
 
-class PixelGA : Pixel {
+class PixelGA {
 public:
-    ~PixelGA() override = default;
+    ~PixelGA() = default;
 
     PixelGA(float g, float a) : g(g), a(a) {};
 
     PixelGA() : PixelGA(0, 0) {};
+
 
 private:
     float g;

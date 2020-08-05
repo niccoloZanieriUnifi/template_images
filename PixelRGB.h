@@ -6,10 +6,11 @@
 #define TEMPLATE_IMAGES_PIXELRGB_H
 
 
-#include "Pixel.h"
 
-class PixelRGB : Pixel {
+class PixelRGB {
 public:
+    ~PixelRGB() = default;
+
     PixelRGB(float r, float g, float b) : r(r), g(g), b(b) {};
 
     explicit PixelRGB(float c) : PixelRGB(c, c, c) {};
