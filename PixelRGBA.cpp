@@ -29,3 +29,8 @@ bool PixelRGBA::operator!=(const PixelRGBA &rhs) const {
     return !(*this == rhs);
 }
 
+PixelRGBA::PixelRGBA(float r, float g, float b, float a) : r(r), g(g), b(b), a(a) {
+    if (r < 0 || g < 0 || b < 0 || a < 0)
+        throw std::out_of_range("Pixel's channels value must be equal or greater than 0!");
+}
+

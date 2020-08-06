@@ -18,13 +18,37 @@ public:
 
     PixelRGB() : PixelRGB(0, 0, 0) {};
 
-    void operator+(const PixelRGB &rhs);
+    PixelRGB operator+(const PixelRGB &rhs);
 
-    void operator-(const PixelRGB &rhs);
+    PixelRGB &operator-(const PixelRGB &rhs);
 
     bool operator==(const PixelRGB &rhs) const;
 
     bool operator!=(const PixelRGB &rhs) const;
+
+    float getR() const {
+        return r;
+    }
+
+    void setR(float r) {
+        PixelRGB::r = r;
+    }
+
+    float getG() const {
+        return g;
+    }
+
+    void setG(float g) {
+        PixelRGB::g = g;
+    }
+
+    float getB() const {
+        return b;
+    }
+
+    void setB(float b) {
+        PixelRGB::b = b;
+    }
 
 private:
     float r;

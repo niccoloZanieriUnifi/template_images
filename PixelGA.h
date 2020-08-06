@@ -23,6 +23,22 @@ public:
 
     bool operator!=(const PixelGA &rhs) const;
 
+    float getG() const {
+        return g;
+    }
+
+    void setG(float g) {
+        PixelGA::g = g;
+    }
+
+    float getA() const {
+        return a;
+    }
+
+    void setA(float a) {
+        PixelGA::a = a;
+    }
+
 private:
     float g;
     float a;

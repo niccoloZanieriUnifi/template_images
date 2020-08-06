@@ -22,6 +22,15 @@ class PixelG {
 
     bool operator!=(const PixelG &rhs) const;
 
+public:
+    float getG() const {
+        return g;
+    }
+
+    void setG(float g) {
+        PixelG::g = g;
+    }
+
 private:
     float g;
 };
