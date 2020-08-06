@@ -8,15 +8,16 @@
 #include <stdexcept>
 
 class PixelG {
+public:
     ~PixelG() = default;
 
-    explicit PixelG(float g) : g(g) {};
+    explicit PixelG(float g);
 
     PixelG() : PixelG(0) {};
 
     PixelG operator+(const PixelG &rhs);
 
-    PixelG & operator-(const PixelG &rhs);
+    PixelG &operator-(const PixelG &rhs);
 
     bool operator==(const PixelG &rhs) const;
 

@@ -4,6 +4,12 @@
 
 #include "PixelG.h"
 
+PixelG::PixelG(float g) : g(g) {
+    if (g < 0)
+        throw std::out_of_range("Pixel's channel value must be equal or greater than 0!");
+
+}
+
 PixelG PixelG::operator+(const PixelG &rhs) {
     g += rhs.g;
 
@@ -25,3 +31,5 @@ bool PixelG::operator==(const PixelG &rhs) const {
 bool PixelG::operator!=(const PixelG &rhs) const {
     return !(*this == rhs);
 }
+
+
