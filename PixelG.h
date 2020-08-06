@@ -14,9 +14,9 @@ class PixelG {
 
     PixelG() : PixelG(0) {};
 
-    void operator+(const PixelG &rhs);
+    PixelG operator+(const PixelG &rhs);
 
-    void operator-(const PixelG &rhs);
+    PixelG & operator-(const PixelG &rhs);
 
     bool operator==(const PixelG &rhs) const;
 

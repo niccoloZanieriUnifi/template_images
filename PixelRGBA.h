@@ -18,9 +18,9 @@ public:
 
     PixelRGBA() : PixelRGBA(0, 0, 0, 0) {};
 
-    void operator+(const PixelRGBA &rhs);
+    PixelRGBA &operator+(const PixelRGBA &rhs);
 
-    void operator-(const PixelRGBA &rhs);
+    PixelRGBA &operator-(const PixelRGBA &rhs);
 
     bool operator==(const PixelRGBA &rhs) const;
 

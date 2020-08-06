@@ -15,9 +15,9 @@ public:
 
     PixelGA() : PixelGA(0, 0) {};
 
-    void operator+(const PixelGA &rhs);
+    PixelGA & operator+(const PixelGA &rhs);
 
-    void operator-(const PixelGA &rhs);
+    PixelGA & operator-(const PixelGA &rhs);
 
     bool operator==(const PixelGA &rhs) const;
 

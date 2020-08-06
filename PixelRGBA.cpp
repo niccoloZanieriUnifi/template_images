@@ -5,20 +5,24 @@
 #include "PixelRGBA.h"
 
 
-void PixelRGBA::operator+(const PixelRGBA &rhs) {
+PixelRGBA &PixelRGBA::operator+(const PixelRGBA &rhs) {
     r += rhs.r;
     g += rhs.g;
     b += rhs.b;
     a += rhs.a;
+
+    return *this;
 }
 
-void PixelRGBA::operator-(const PixelRGBA &rhs) {
+PixelRGBA &PixelRGBA::operator-(const PixelRGBA &rhs) {
     if (r - rhs.r < 0 || b - rhs.b < 0 || g - rhs.g < 0 || a - rhs.a < 0)
         throw std::out_of_range("Pixel's channels value must be equal or greater than 0!");
     r -= rhs.r;
     g -= rhs.g;
     b -= rhs.b;
     a -= rhs.a;
+
+    return *this;
 }
 
 bool PixelRGBA::operator==(const PixelRGBA &rhs) const {

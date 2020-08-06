@@ -18,7 +18,7 @@ public:
 
     PixelRGB() : PixelRGB(0, 0, 0) {};
 
-    PixelRGB operator+(const PixelRGB &rhs);
+    PixelRGB & operator+(const PixelRGB &rhs);
 
     PixelRGB &operator-(const PixelRGB &rhs);
 
