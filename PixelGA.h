@@ -11,7 +11,7 @@ class PixelGA {
 public:
     ~PixelGA() = default;
 
-    PixelGA(float g, float a) : g(g), a(a) {};
+    PixelGA(float g, float a);
 
     PixelGA() : PixelGA(0, 0) {};
 

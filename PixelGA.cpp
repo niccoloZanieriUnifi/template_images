@@ -4,6 +4,11 @@
 
 #include "PixelGA.h"
 
+PixelGA::PixelGA(float g, float a) : g(g), a(a) {
+    if (g < 0 || a < 0)
+        throw std::out_of_range("Pixel's channels value must be equal or greater than 0!");
+};
+
 PixelGA &PixelGA::operator+(const PixelGA &rhs) {
     g += rhs.g;
     a += rhs.a;
