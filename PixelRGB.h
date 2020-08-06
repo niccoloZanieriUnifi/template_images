@@ -12,7 +12,7 @@ class PixelRGB {
 public:
     ~PixelRGB() = default;
 
-    PixelRGB(float r, float g, float b) : r(r), g(g), b(b) {};
+    PixelRGB(float r, float g, float b);
 
     explicit PixelRGB(float c) : PixelRGB(c, c, c) {};
 
