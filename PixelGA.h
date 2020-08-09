@@ -39,6 +39,8 @@ public:
         PixelGA::a = a;
     }
 
+    void setValue(float gray, float alpha);
+
 private:
     float g;
     float a;

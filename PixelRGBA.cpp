@@ -40,3 +40,10 @@ PixelRGBA::PixelRGBA(float r, float g, float b, float a) : r(r), g(g), b(b), a(a
         throw std::out_of_range("Pixel's channels value must be equal or greater than 0!");
 }
 
+void PixelRGBA::setValue(float red, float green, float blue, float alpha) {
+    r = red;
+    g = green;
+    b = blue;
+    a = alpha;
+}
+

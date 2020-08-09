@@ -33,3 +33,8 @@ bool PixelGA::operator==(const PixelGA &rhs) const {
 bool PixelGA::operator!=(const PixelGA &rhs) const {
     return !(*this == rhs);
 }
+
+void PixelGA::setValue(float gray, float alpha) {
+    g = gray;
+    a = alpha;
+}

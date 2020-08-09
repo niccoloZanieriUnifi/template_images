@@ -35,3 +35,9 @@ bool PixelRGB::operator==(const PixelRGB &rhs) const {
 bool PixelRGB::operator!=(const PixelRGB &rhs) const {
     return !(*this == rhs);
 }
+
+void PixelRGB::setValue(float red, float green, float blue) {
+    r = red;
+    g = green;
+    b = blue;
+}

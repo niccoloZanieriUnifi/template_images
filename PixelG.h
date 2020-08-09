@@ -32,6 +32,10 @@ public:
         PixelG::g = g;
     }
 
+    void setValue(float gray) {
+        g = gray;
+    }
+
 private:
     float g;
 };

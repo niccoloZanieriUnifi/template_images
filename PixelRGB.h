@@ -50,6 +50,8 @@ public:
         PixelRGB::b = b;
     }
 
+    void setValue(float red, float green, float blue);
+
 private:
     float r;
     float g;

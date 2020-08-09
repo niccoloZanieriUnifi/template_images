@@ -58,6 +58,8 @@ public:
         PixelRGBA::a = a;
     }
 
+    void setValue(float red, float green, float blue, float alpha);
+
 private:
     float r;
     float g;
