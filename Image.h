@@ -66,8 +66,8 @@ public:
             pixels.emplace_back(PixelRGB());
     }
 
-    void setPixel(int x, int y, float r, float g, float b, float a) {
-        pixels[x * height + y].setValue(r, g, b, a);
+    void setPixel(int x, int y, float r, float g, float b) {
+        pixels[x * height + y].setValue(r, g, b);
     }
 
 
@@ -75,6 +75,50 @@ private:
     int height{0};
     int width{0};
     std::vector<PixelRGB> pixels;
+};
+
+template<>
+class Image<PixelGA> {
+public:
+    Image() : Image(0, 0) {};
+
+    Image(int h, int w) : height(h), width(w) {
+        pixels.reserve(h * w);
+        for (int i = 0; i < h * w; i++)
+            pixels.emplace_back(PixelGA());
+    }
+
+    void setPixel(int x, int y, float g, float a) {
+        pixels[x * height + y].setValue(g, a);
+    }
+
+
+private:
+    int height{0};
+    int width{0};
+    std::vector<PixelGA> pixels;
+};
+
+template<>
+class Image<PixelG> {
+public:
+    Image() : Image(0, 0) {};
+
+    Image(int h, int w) : height(h), width(w) {
+        pixels.reserve(h * w);
+        for (int i = 0; i < h * w; i++)
+            pixels.emplace_back(PixelG());
+    }
+
+    void setPixel(int x, int y, float g) {
+        pixels[x * height + y].setValue(g);
+    }
+
+
+private:
+    int height{0};
+    int width{0};
+    std::vector<PixelG> pixels;
 };
 
 

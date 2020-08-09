@@ -1,7 +1,13 @@
 #include <iostream>
 #include "Image.h"
+
+
+#include <fstream>
+#include <iostream>
+
+using namespace std;
+
 int main() {
-    std::cout << "Hello, World!" << std::endl;
 
     return 0;
 }
